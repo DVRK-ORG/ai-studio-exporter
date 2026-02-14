@@ -259,7 +259,7 @@ const App: React.FC = () => {
 
           <div className="flex flex-col items-end">
             <p className="text-[9px] text-white/10 font-black tracking-tight uppercase whitespace-nowrap">
-              v1.2.0 • <span className="text-white/30">Stable Build</span>
+              v1.3.0 • <span className="text-white/30">Stable Build</span>
             </p>
             <p className="text-[10px] text-white/10 font-bold tracking-widest uppercase mt-0.5" style={{ fontFamily: 'Orbitron, sans-serif' }}>
               CRAFTED WITH 🖤

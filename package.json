@@ -1,6 +1,7 @@
 {
   "name": "ai-studio-export",
-  "version": "1.0.0",
+  "version": "1.3.0",
+  "description": "Export Google AI Studio chats to Markdown, PDF, JSON & TXT. Obsidian-optimized.",
   "type": "module",
   "scripts": {
     "dev": "vite",
