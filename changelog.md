@@ -69,7 +69,7 @@
 #### 9. Privacy & Permissions Configuration
 
 - ✅ Single purpose description provided
-- ✅ Permission justifications filled for: `activeTab`, `scripting`, `downloads`, `host permission`
+- ✅ Permission justifications filled for: `activeTab`, `downloads`, `host permission`
 - ✅ Remote code usage: **No** (all code bundled locally)
 - ✅ Data usage: **No data collected** (all checkboxes unchecked)
 - ✅ Privacy certifications: All 3 disclosures certified ✔️
@@ -77,11 +77,22 @@
 - ✅ Homepage URL: `ai-exporter.pro`
 - ✅ Support URL: `https://github.com/DVRK-ORG/ai-studio-exporter/issues`
 
-#### 10. Submission 🚀
+#### 10. First Submission & Rejection ⚠️
 
-- ✅ **Submitted for Google review** — 2026-02-14 at 03:18 AM (Bahrain Time)
-- ⏳ Awaiting Google review & approval (typically 1–3 business days)
-- ⏳ Public listing goes live after approval
+- ✅ **First submission** — 2026-02-14 at 03:18 AM (Bahrain Time)
+- ❌ **Rejected within 10 minutes** — Violation: "Use of Permissions" (Ref: Purple Potassium)
+- 📋 **Reason:** `scripting` permission was declared in `manifest.json` but never used in code
+- 💡 **Root cause:** Content script uses declarative injection via `content_scripts` manifest field, not programmatic `chrome.scripting` API — so the permission was unnecessary
+
+#### 11. Fix & Resubmission 🔧
+
+- ✅ Removed `scripting` from `manifest.json` permissions array
+- ✅ Verified `chrome.scripting` is not referenced anywhere in the codebase
+- ✅ Rebuilt extension via `npm run build`
+- ✅ Repackaged `ai-studio-exporter-v1.3.0.zip` with corrected manifest
+- ✅ Updated privacy tab — removed scripting justification
+- ✅ **Resubmitted for Google review** — 2026-02-14 at 03:43 AM (Bahrain Time)
+- ⏳ Awaiting Google review & approval
 
 ---
 

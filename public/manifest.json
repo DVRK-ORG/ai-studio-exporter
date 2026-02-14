@@ -6,7 +6,6 @@
   "homepage_url": "https://github.com/DVRK-ORG/ai-studio-exporter",
   "permissions": [
     "activeTab",
-    "scripting",
     "downloads"
   ],
   "host_permissions": [
