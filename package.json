@@ -9,12 +9,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/orbitron": "^5.2.8",
     "jspdf": "^3.0.4",
     "lucide-react": "^0.378.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@rollup/plugin-replace": "^6.0.3",
     "@types/chrome": "^0.0.268",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.66",

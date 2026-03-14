@@ -92,7 +92,36 @@
 - ✅ Repackaged `ai-studio-exporter-v1.3.0.zip` with corrected manifest
 - ✅ Updated privacy tab — removed scripting justification
 - ✅ **Resubmitted for Google review** — 2026-02-14 at 03:43 AM (Bahrain Time)
-- ⏳ Awaiting Google review & approval
+- ❌ **Second submission rejected** — 2026-02-17. Violations: "Remote Code" (Google Fonts) & "Use of Permissions" (`downloads`)
+
+#### 13. Fix & Second Resubmission 🔧
+
+- ✅ Replaced remote Google Fonts URLs (`@import`) with locally bundled `@fontsource` npm packages to comply with MV3 remote code policies.
+- ✅ Removed `downloads` permission from `manifest.json` as the exporter uses standard JS Blobs instead of the Chrome Extension Download API.
+- ✅ Rebuilt (`npm run build`) and repackaged `ai-studio-exporter-v1.3.0.zip`.
+- ✅ **Second Resubmission Sent** — Uploaded to Chrome Developer Dashboard on 2026-02-26.
+- ❌ **Third submission rejected** — 2026-03-14. Violation: "Including remotely hosted code in a Manifest V3 item."
+
+#### 14. Deep Scan & Third Resubmission 🔧
+
+- 🔍 **Root Cause 1 — Vite `crossorigin` injection:** Vite automatically adds `crossorigin` attributes to `<script>` and `<link>` tags in the built `index.html`. Chrome Web Store's automated scanner interprets this as potential remote code loading.
+- 🔍 **Root Cause 2 — `jspdf` hardcoded CDN URL:** The `jspdf` library ships with a hardcoded CDN reference to `https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.1.1/pdfobject.min.js` in its minified code (used for the `pdfobjectnewwindow` output mode). Chrome's scanner flags this as remotely hosted code.
+- ✅ Created custom Vite plugin `stripCrossorigin` to remove `crossorigin` attributes from HTML at build time.
+- ✅ Installed `@rollup/plugin-replace` to neutralize the jspdf CDN URL, replacing it with a harmless `data:text/javascript,` data URI at build time.
+- ✅ Updated `vite.config.ts` with both plugins.
+- ✅ Rebuilt (`npm run build`) and verified:
+  - `dist/index.html` — no `crossorigin` attributes ✔️
+  - `dist/src/popup.js` — no `cdnjs.cloudflare.com` references ✔️
+- ✅ Repackaged `dist.zip` and verified zip contents match clean build.
+- ✅ **Third Resubmission Sent** — Uploaded to Chrome Developer Dashboard on 2026-03-14 at 04:34 AM (Bahrain Time).
+- ⏳ Awaiting Google review & approval.
+
+#### 12. Landing Page & Deployment 🌐
+
+- ✅ **Neon Chrome Store Buttons**: Replaced static buttons with **flickering neon** components cycling through Google brand colors (Red/Yellow/Green/Blue) for high-impact CTA.
+- ✅ **Ground Reflection**: Added perspective-warped ground glow to hero buttons for "physical" lighting effect.
+- ✅ **Demo Polish**: Removed misleading "Play" button overlay from the auto-playing feature GIF.
+- ✅ **Production Deployment**: Pushed v1.3.0 landing page updates to GitHub → Auto-deployed to **Cloudflare Pages**.
 
 ---
 

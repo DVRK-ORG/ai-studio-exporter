@@ -5,8 +5,7 @@
   "description": "Export Google AI Studio chats to Markdown, PDF, JSON & TXT. Obsidian-optimized with reasoning block extraction.",
   "homepage_url": "https://github.com/DVRK-ORG/ai-studio-exporter",
   "permissions": [
-    "activeTab",
-    "downloads"
+    "activeTab"
   ],
   "host_permissions": [
     "*://aistudio.google.com/*"
