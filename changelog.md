@@ -1,6 +1,13 @@
 # Changelog - AI Studio Export (Obsidian Edition)
 
-## [v1.3.0] - Chrome Web Store Launch 🚀
+## [v1.3.0] - 2026-03-20 🖤
+### 🚀 Official Chrome Web Store Release
+- Published on Chrome Web Store after 4 submission rounds
+- Added sitemap.xml and robots.txt for SEO indexing
+- Full Open Graph + Twitter Card metadata added to landing page
+- YouTube channel created with demo video
+- Product Hunt launch scheduled
+- GitHub Release v1.3.0 published
 
 **Date:** 2026-02-14 → 2026-03-20
 **Status:** ✅ Officially Published on Chrome Web Store
