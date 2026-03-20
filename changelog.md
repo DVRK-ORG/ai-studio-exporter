@@ -2,8 +2,9 @@
 
 ## [v1.3.0] - Chrome Web Store Launch 🚀
 
-**Date:** 2026-02-14 (Valentine's Day 🖤)
-**Status:** Official Chrome Web Store Release
+**Date:** 2026-02-14 → 2026-03-20
+**Status:** ✅ Officially Published on Chrome Web Store
+**Store URL:** [AI Studio Exporter | Obsidian Edition](https://chromewebstore.google.com/detail/ai-studio-exporter-obsidi/ilkhnmgiliicnmheodofikeeaibfdddk)
 
 ### 📋 Step-by-Step Progress Log
 
@@ -114,7 +115,7 @@
   - `dist/src/popup.js` — no `cdnjs.cloudflare.com` references ✔️
 - ✅ Repackaged `dist.zip` and verified zip contents match clean build.
 - ✅ **Third Resubmission Sent** — Uploaded to Chrome Developer Dashboard on 2026-03-14 at 04:34 AM (Bahrain Time).
-- ⏳ Awaiting Google review & approval.
+- ✅ **Officially Approved & Published** — 2026-03-20. The extension is now live on the Chrome Web Store! 🎉🏆
 
 #### 12. Landing Page & Deployment 🌐
 
